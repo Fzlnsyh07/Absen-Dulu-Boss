@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Supabase</title>
+    <style>
+        body { font-family: system-ui, sans-serif; display: flex; flex-direction: column; align-items: center; background-color: #f0f2f5; margin: 0; padding: 20px; }
+        .container { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%; max-width: 500px; }
+        button { background-color: #3ecf8e; color: white; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px; width: 100%; }
+        input { width: calc(100% - 22px); padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        #response { margin-top: 1rem; font-weight: bold; text-align: center; }
+        .section { margin-bottom: 2rem; }
+        h2 { text-align: center; color: #333; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>1. Pendaftaran Pengguna</h2>
+            <input type="text" id="registerName" placeholder="Masukkan Nama Lengkap Anda">
+            <button id="registerButton">Daftarkan Saya</button>
+        </div>
+
+        <div class="section">
+            <h2>2. Lakukan Absensi</h2>
+            <input type="text" id="attendName" placeholder="Masukkan Nama untuk Absen">
+            <button id="captureButton">Ambil Absen</button>
+        </div>
+
+        <p id="response">Status: Menunggu...</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
